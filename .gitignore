@@ -1,0 +1,16 @@
+# Environment variables
+.env
+*.env
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+dist/
+
+# Generated audio
+response.mp3

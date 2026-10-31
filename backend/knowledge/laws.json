@@ -1,0 +1,290 @@
+[
+  {
+    "law_number": 1,
+    "title": "Never Outshine the Master",
+    "summary": "Be careful not to make people above you feel insecure or threatened by your abilities. Show your strengths while respecting their position.",
+    "keywords": ["boss", "manager", "superior", "authority", "workplace", "respect"]
+  },
+  {
+    "law_number": 2,
+    "title": "Never Put Too Much Trust in Friends, Learn How to Use Enemies",
+    "summary": "Choose relationships carefully. Friendship does not always guarantee reliability, while a former rival may sometimes become a useful ally.",
+    "keywords": ["friends", "enemies", "trust", "relationships", "ally"]
+  },
+  {
+    "law_number": 3,
+    "title": "Conceal Your Intentions",
+    "summary": "Do not reveal every plan or intention immediately. Think carefully about what information should be shared and when.",
+    "keywords": ["plans", "secrets", "intentions", "strategy", "information"]
+  },
+  {
+    "law_number": 4,
+    "title": "Always Say Less Than Necessary",
+    "summary": "Communicate clearly and avoid unnecessary talking. Saying less can help you remain composed and avoid revealing information unnecessarily.",
+    "keywords": ["communication", "talking", "silence", "conversation", "speech"]
+  },
+  {
+    "law_number": 5,
+    "title": "So Much Depends on Reputation — Guard It With Your Life",
+    "summary": "Your reputation strongly affects how others perceive and treat you. Build credibility and protect it through consistent behavior.",
+    "keywords": ["reputation", "trust", "image", "credibility", "respect"]
+  },
+  {
+    "law_number": 6,
+    "title": "Court Attention at All Costs",
+    "summary": "Being noticed can influence how people perceive your presence and value. Learn to communicate your strengths without becoming disruptive.",
+    "keywords": ["attention", "visibility", "recognition", "presence", "fame"]
+  },
+  {
+    "law_number": 7,
+    "title": "Get Others to Do the Work for You, but Always Take the Credit",
+    "summary": "Use collaboration and delegation effectively, while making sure contributions are recognized fairly and responsibilities are clear.",
+    "keywords": ["work", "delegation", "team", "credit", "leadership"]
+  },
+  {
+    "law_number": 8,
+    "title": "Make Other People Come to You — Use Bait If Necessary",
+    "summary": "Instead of always chasing opportunities, create value or incentives that encourage others to approach you.",
+    "keywords": ["opportunity", "influence", "strategy", "negotiation", "attention"]
+  },
+  {
+    "law_number": 9,
+    "title": "Win Through Your Actions, Never Through Argument",
+    "summary": "Strong results often communicate more effectively than arguments. Demonstrate your ability through actions and evidence.",
+    "keywords": ["actions", "argument", "results", "proof", "success"]
+  },
+  {
+    "law_number": 10,
+    "title": "Infection: Avoid the Unhappy and Unlucky",
+    "summary": "The attitudes and behaviors of people around you can influence your mindset. Maintain healthy boundaries with consistently negative influences.",
+    "keywords": ["negativity", "people", "mindset", "relationships", "attitude"]
+  },
+  {
+    "law_number": 11,
+    "title": "Learn to Keep People Dependent on You",
+    "summary": "Develop useful skills and reliability so that your contribution remains valuable to a team or organization.",
+    "keywords": ["skills", "value", "dependency", "career", "team"]
+  },
+  {
+    "law_number": 12,
+    "title": "Use Selective Honesty and Generosity to Disarm Your Victim",
+    "summary": "Honesty and generosity can build trust, but they should be used thoughtfully and ethically in relationships.",
+    "keywords": ["honesty", "generosity", "trust", "relationships", "communication"]
+  },
+  {
+    "law_number": 13,
+    "title": "When Asking for Help, Appeal to People's Self-Interest",
+    "summary": "When requesting help, explain how the situation can also benefit the person you are asking.",
+    "keywords": ["help", "request", "persuasion", "benefit", "communication"]
+  },
+  {
+    "law_number": 14,
+    "title": "Pose as a Friend, Work as a Spy",
+    "summary": "Pay attention to useful information in your environment, but respect privacy and avoid deceptive or harmful behavior.",
+    "keywords": ["information", "observation", "intelligence", "friendship", "strategy"]
+  },
+  {
+    "law_number": 15,
+    "title": "Crush Your Enemy Totally",
+    "summary": "Resolve serious conflicts decisively rather than leaving problems that may repeatedly return. In modern situations, this means addressing the root cause.",
+    "keywords": ["conflict", "competition", "problem", "strategy", "resolution"]
+  },
+  {
+    "law_number": 16,
+    "title": "Use Absence to Increase Respect and Honor",
+    "summary": "Constant availability can reduce perceived value. Appropriate space and boundaries can increase appreciation.",
+    "keywords": ["absence", "respect", "boundaries", "availability", "relationships"]
+  },
+  {
+    "law_number": 17,
+    "title": "Keep Others in Suspended Terror: Cultivate an Air of Unpredictability",
+    "summary": "Avoid becoming completely predictable. Flexibility and controlled uncertainty can help you respond effectively to changing situations.",
+    "keywords": ["unpredictability", "flexibility", "strategy", "behavior", "change"]
+  },
+  {
+    "law_number": 18,
+    "title": "Do Not Build Fortresses to Protect Yourself — Isolation Is Dangerous",
+    "summary": "Completely isolating yourself can reduce information, support, and opportunities. Maintain useful connections with others.",
+    "keywords": ["isolation", "network", "relationships", "support", "connection"]
+  },
+  {
+    "law_number": 19,
+    "title": "Know Who You're Dealing With — Do Not Offend the Wrong Person",
+    "summary": "Understand the personality, position, and context of the people you interact with before making important decisions.",
+    "keywords": ["people", "personality", "authority", "relationships", "awareness"]
+  },
+  {
+    "law_number": 20,
+    "title": "Do Not Commit to Anyone",
+    "summary": "Avoid making unnecessary commitments too quickly. Maintain independence when a situation requires careful evaluation.",
+    "keywords": ["commitment", "independence", "decisions", "relationships", "strategy"]
+  },
+  {
+    "law_number": 21,
+    "title": "Play a Sucker to Catch a Sucker — Seem Dumber Than Your Mark",
+    "summary": "Sometimes appearing less knowledgeable can make others reveal more information. Use this principle cautiously and ethically.",
+    "keywords": ["intelligence", "strategy", "information", "communication", "observation"]
+  },
+  {
+    "law_number": 22,
+    "title": "Use the Surrender Tactic: Transform Weakness Into Power",
+    "summary": "When direct resistance is not effective, stepping back can create time and space to regain strength and choose a better strategy.",
+    "keywords": ["weakness", "surrender", "strength", "strategy", "conflict"]
+  },
+  {
+    "law_number": 23,
+    "title": "Concentrate Your Forces",
+    "summary": "Focus your time, energy, and resources on important goals instead of spreading yourself too thin.",
+    "keywords": ["focus", "concentration", "goals", "productivity", "resources"]
+  },
+  {
+    "law_number": 24,
+    "title": "Play the Perfect Courtier",
+    "summary": "Use emotional intelligence, respect, diplomacy, and good communication when working with people who have influence.",
+    "keywords": ["diplomacy", "communication", "leadership", "workplace", "social skills"]
+  },
+  {
+    "law_number": 25,
+    "title": "Re-Create Yourself",
+    "summary": "Do not let old labels define you. Intentionally develop your identity, skills, and personal image.",
+    "keywords": ["identity", "growth", "career", "change", "self-development"]
+  },
+  {
+    "law_number": 26,
+    "title": "Keep Your Hands Clean",
+    "summary": "Protect your credibility by taking responsibility for your actions and avoiding unnecessary involvement in questionable behavior.",
+    "keywords": ["reputation", "responsibility", "ethics", "credibility", "leadership"]
+  },
+  {
+    "law_number": 27,
+    "title": "Play on People's Need to Believe to Create a Cultlike Following",
+    "summary": "People naturally seek meaning and belonging. Build communities through genuine value rather than exploiting people's vulnerabilities.",
+    "keywords": ["belief", "community", "leadership", "influence", "following"]
+  },
+  {
+    "law_number": 28,
+    "title": "Enter Action With Boldness",
+    "summary": "Once you have evaluated a decision, confident action can be more effective than constant hesitation.",
+    "keywords": ["confidence", "action", "decision", "courage", "leadership"]
+  },
+  {
+    "law_number": 29,
+    "title": "Plan All the Way to the End",
+    "summary": "Think beyond the immediate step and consider possible outcomes, risks, and consequences before acting.",
+    "keywords": ["planning", "goals", "strategy", "risk", "future"]
+  },
+  {
+    "law_number": 30,
+    "title": "Make Your Accomplishments Seem Effortless",
+    "summary": "Good preparation allows you to present your work clearly and confidently without showing unnecessary struggle.",
+    "keywords": ["success", "presentation", "confidence", "preparation", "performance"]
+  },
+  {
+    "law_number": 31,
+    "title": "Control the Options: Get Others to Play With the Cards You Deal",
+    "summary": "When presenting choices, structure them around realistic options that support the overall goal.",
+    "keywords": ["choices", "options", "negotiation", "decision", "influence"]
+  },
+  {
+    "law_number": 32,
+    "title": "Play to People's Fantasies",
+    "summary": "Understand what people hope for and value, while communicating ideas in a way that connects with their aspirations.",
+    "keywords": ["dreams", "aspirations", "persuasion", "communication", "motivation"]
+  },
+  {
+    "law_number": 33,
+    "title": "Discover Each Man's Thumbscrew",
+    "summary": "Understand what motivates different people. Knowing their priorities can help you communicate and negotiate more effectively.",
+    "keywords": ["motivation", "weakness", "people", "negotiation", "influence"]
+  },
+  {
+    "law_number": 34,
+    "title": "Be Royal in Your Own Fashion: Act Like a King to Be Treated Like One",
+    "summary": "Carry yourself with confidence, dignity, and self-respect so that others understand the standards you set for yourself.",
+    "keywords": ["confidence", "dignity", "self-respect", "leadership", "presence"]
+  },
+  {
+    "law_number": 35,
+    "title": "Master the Art of Timing",
+    "summary": "Good decisions depend not only on what you do but also on when you do it.",
+    "keywords": ["timing", "decisions", "opportunity", "patience", "strategy"]
+  },
+  {
+    "law_number": 36,
+    "title": "Disdain Things You Cannot Have: Ignoring Them Is the Best Revenge",
+    "summary": "Do not waste energy obsessing over things outside your control. Focus attention on achievable goals.",
+    "keywords": ["control", "acceptance", "focus", "revenge", "mindset"]
+  },
+  {
+    "law_number": 37,
+    "title": "Create Compelling Spectacles",
+    "summary": "Strong visual presentation and memorable experiences can make ideas easier for people to notice and remember.",
+    "keywords": ["presentation", "visual", "attention", "communication", "impact"]
+  },
+  {
+    "law_number": 38,
+    "title": "Think as You Like but Behave Like Others",
+    "summary": "Keep your independent thoughts while understanding social norms and adapting your behavior appropriately.",
+    "keywords": ["society", "behavior", "independence", "adaptation", "communication"]
+  },
+  {
+    "law_number": 39,
+    "title": "Stir Up Waters to Catch Fish",
+    "summary": "Emotional situations can reveal useful information, but creating unnecessary conflict can cause harm. Stay calm and observant.",
+    "keywords": ["emotion", "conflict", "strategy", "observation", "calm"]
+  },
+  {
+    "law_number": 40,
+    "title": "Despise the Free Lunch",
+    "summary": "Be cautious about offers that appear completely free. Understand the hidden costs, obligations, or expectations.",
+    "keywords": ["free", "cost", "offers", "business", "risk"]
+  },
+  {
+    "law_number": 41,
+    "title": "Avoid Stepping Into a Great Man's Shoes",
+    "summary": "Do not simply copy a successful predecessor. Build your own strengths and identity while learning from those before you.",
+    "keywords": ["success", "leadership", "identity", "career", "predecessor"]
+  },
+  {
+    "law_number": 42,
+    "title": "Strike the Shepherd and the Sheep Will Scatter",
+    "summary": "In group conflicts, understanding the central source of a problem can help resolve the wider situation.",
+    "keywords": ["leadership", "group", "conflict", "influence", "organization"]
+  },
+  {
+    "law_number": 43,
+    "title": "Work on the Hearts and Minds of Others",
+    "summary": "People respond strongly when they feel understood and respected. Build trust by understanding their needs and perspectives.",
+    "keywords": ["empathy", "persuasion", "trust", "relationships", "communication"]
+  },
+  {
+    "law_number": 44,
+    "title": "Disarm and Infuriate With the Mirror Effect",
+    "summary": "Reflecting another person's behavior or communication style can reveal patterns and change the dynamics of an interaction.",
+    "keywords": ["mirror", "behavior", "communication", "conflict", "psychology"]
+  },
+  {
+    "law_number": 45,
+    "title": "Preach the Need for Change, but Never Reform Too Much at Once",
+    "summary": "People often accept change more easily when it is introduced gradually. Balance improvement with stability.",
+    "keywords": ["change", "reform", "leadership", "management", "adaptation"]
+  },
+  {
+    "law_number": 46,
+    "title": "Never Appear Too Perfect",
+    "summary": "Showing some humility and acknowledging that nobody is perfect can make you more relatable and trustworthy.",
+    "keywords": ["perfection", "humility", "trust", "image", "relationships"]
+  },
+  {
+    "law_number": 47,
+    "title": "Do Not Go Past the Mark You Aimed For; In Victory, Learn When to Stop",
+    "summary": "After achieving a goal, recognize when further action could create unnecessary risk. Know when enough is enough.",
+    "keywords": ["success", "limits", "goals", "risk", "self-control"]
+  },
+  {
+    "law_number": 48,
+    "title": "Assume Formlessness",
+    "summary": "Stay adaptable instead of becoming trapped by one fixed strategy. Adjust to changing circumstances.",
+    "keywords": ["adaptability", "flexibility", "change", "strategy", "resilience"]
+  }
+]
