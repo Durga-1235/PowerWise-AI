@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import "./App.css";
 
-const API = "http://127.0.0.1:8001";
+const API = "https://powerwise-ai-oldt.onrender.com";
 
 // Clean unwanted formatting before displaying and speaking
 const cleanResponse = (text = "") => {
