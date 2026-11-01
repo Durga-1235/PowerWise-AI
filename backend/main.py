@@ -124,8 +124,10 @@ def search_laws(query: str):
    
 
 
+
 class ChatRequest(BaseModel):
     question: str
+
 
 @app.post("/chat")
 def chat(request: ChatRequest):
@@ -138,95 +140,148 @@ def chat(request: ChatRequest):
             "law": None
         }
 
-    # Find relevant laws
     question_lower = question.lower()
+
+    # Ignore common words while searching for matching laws
+    stop_words = {
+        "what", "is", "the", "a", "an", "of", "in", "on",
+        "to", "for", "and", "or", "explain", "tell", "me",
+        "about", "how", "can", "i", "please", "give",
+        "with", "this", "that", "does", "do", "who"
+    }
+
+    question_words = {
+        word for word in re.findall(r"[a-zA-Z0-9]+", question_lower)
+        if len(word) > 2 and word not in stop_words
+    }
+
     relevant_laws = []
 
-    for law in laws:
-        searchable_text = (
-            law["title"] + " " +
-            law["summary"] + " " +
-            " ".join(law["keywords"])
-        ).lower()
-
-        if any(word in searchable_text for word in question_lower.split()):
-            relevant_laws.append(law)
-
-    if not relevant_laws:
-        relevant_laws = laws[:5]
-
-    context = "\n\n".join(
-        f"Law {law['law_number']} - {law['title']}\n"
-        f"{law['summary']}"
-        for law in relevant_laws[:5]
+    # Check whether the user asked about a specific law number
+    law_match = re.search(
+        r"\blaw\s*(?:number\s*)?(\d{1,2})\b",
+        question_lower
     )
 
-    response = client.chat.completions.create(
-        model="openai/gpt-oss-120b",
-        messages=[
-            {
-                "role": "system",
-                "content": """
-You are PowerWise AI, a professional voice-based
-strategic thinking assistant based on The 48 Laws of Power.
+    if law_match:
+        requested_number = int(law_match.group(1))
 
-RESPONSE RULES:
+        relevant_laws = [
+            law for law in laws
+            if law.get("law_number") == requested_number
+        ]
 
-1. Understand the user's question before answering.
-2. Respond in the same language as the user's question.
-3. Give a direct and useful introduction.
-4. Explain only the most relevant laws.
-5. Present each law separately, one below another.
-6. Use this exact structure:
+    else:
+        # Search for laws using titles, summaries and keywords
+        scored_laws = []
 
-Law 1 - Law Title
+        for law in laws:
 
-Explanation in simple and clear language.
+            searchable_text = " ".join([
+                str(law.get("title", "")),
+                str(law.get("summary", "")),
+                " ".join(law.get("keywords", []))
+            ]).lower()
 
-Practical Example:
-Give a realistic example.
+            law_words = set(
+                re.findall(r"[a-zA-Z0-9]+", searchable_text)
+            )
 
-Law 2 - Law Title
+            score = len(question_words.intersection(law_words))
 
-Explanation in simple and clear language.
+            if score > 0:
+                scored_laws.append((score, law))
 
-Practical Example:
-Give a realistic example.
+        # Select only the most relevant laws
+        scored_laws.sort(key=lambda item: item[0], reverse=True)
 
-7. Use proper paragraph spacing.
-8. Finish with a short practical conclusion.
-9. Keep the answer professional, clear and conversational.
-10. Explain concepts in a way that is easy to understand
-    when spoken aloud.
+        if scored_laws:
+            highest_score = scored_laws[0][0]
 
-STRICT FORMATTING RULES:
+            relevant_laws = [
+                law for score, law in scored_laws
+                if score == highest_score
+            ][:3]
 
-- Never use Markdown symbols such as **, ###, or ``` .
-- Never use HTML tags such as <br>.
-- Never use tables or pipe separators.
-- Never combine multiple laws into one paragraph.
-- Never invent law numbers or unsupported facts.
-- Do not read out formatting instructions.
+    # Prepare knowledge context only when relevant laws are found
+    if relevant_laws:
+        context = "\n\n".join(
+            f"Law {law['law_number']} - {law['title']}\n"
+            f"{law['summary']}"
+            for law in relevant_laws
+        )
+    else:
+        context = "No directly matching law was found in the knowledge base."
+
+    system_prompt = """
+You are PowerWise AI, a helpful and professional AI assistant.
+
+You can answer BOTH:
+1. Questions about The 48 Laws of Power.
+2. General questions about technology, programming, AI,
+   education, careers, science, and everyday topics.
+
+IMPORTANT RULES:
+
+1. First understand what the user is asking.
+2. Answer the actual question directly.
+3. Respond in the same language as the user.
+4. If the question is about The 48 Laws of Power,
+   use the supplied law knowledge when relevant.
+5. If the question is a general question,
+   answer it normally using your general knowledge.
+6. NEVER force a general question into a 48 Laws of Power answer.
+7. NEVER mention a law if it is not relevant to the question.
+8. If the supplied knowledge does not contain the answer
+   to a specific law question, say so honestly.
+9. Give simple explanations and practical examples when useful.
+10. Do not invent facts or law numbers.
+11. Keep answers clear, professional and conversational.
+12. Do not use Markdown symbols, HTML tags or tables.
+13. Make the answer easy to understand when spoken aloud.
 """
-            },
-            {
-                "role": "user",
-                "content": (
-                    f"Available knowledge:\n{context}\n\n"
-                    f"User question: {question}"
-                )
-            }
-        ],
-        temperature=0.3,
-        max_completion_tokens=700
-    )
 
-    answer = response.choices[0].message.content.strip()
+    user_prompt = f"""
+Question from user:
+{question}
 
-    return {
-        "answer": answer,
-        "law": relevant_laws[0] if relevant_laws else None
-    }
+Relevant knowledge from The 48 Laws of Power:
+{context}
+
+Answer the user's actual question.
+If it is a general question, answer it as a general AI assistant.
+"""
+
+    try:
+        response = client.chat.completions.create(
+            model="openai/gpt-oss-120b",
+            messages=[
+                {
+                    "role": "system",
+                    "content": system_prompt
+                },
+                {
+                    "role": "user",
+                    "content": user_prompt
+                }
+            ],
+            temperature=0.3,
+            max_completion_tokens=700
+        )
+
+        answer = response.choices[0].message.content.strip()
+
+        return {
+            "answer": answer,
+            "law": relevant_laws[0] if relevant_laws else None
+        }
+
+    except Exception as e:
+        return {
+            "answer": "Sorry, I am unable to process your question right now. Please try again.",
+            "law": None,
+            "error": str(e)
+        }
 
 @app.post("/voice-to-text")
 async def voice_to_text(audio: UploadFile = File(...)):

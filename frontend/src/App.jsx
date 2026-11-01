@@ -3,7 +3,6 @@ import { useEffect, useState, useRef } from "react";
 import "./App.css";
 
 const API = "https://powerwise-ai-oldt.onrender.com";
-
 // Clean unwanted formatting before displaying and speaking
 const cleanResponse = (text = "") => {
   return String(text)
@@ -27,7 +26,7 @@ function App() {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      text: "Welcome to PowerWise AI. Ask me anything about the 48 Laws of Power."
+      text: "Welcome to PowerWise AI! Ask me anything about the 48 Laws of Power, technology, education, careers, or general topics."
     }
   ]);
 
